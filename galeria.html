@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario y Galería</title>
+  <link rel="stylesheet" href="Estilos3.css">
+</head>
+<body>
+    <div class="encabezado">
+        <h1>Galeria y Formulario</h1>
+        <nav>
+            <ul>
+              <li><a href="infancia.html">pagina 2</a></li>
+              <li><a href="contribuciones.html">pagina 3</a></li>
+              <li><a href="galeria.html">Galeria</a></li>
+            </ul>
+        </nav>    
+        </div>
+
+  <h1>Formulario</h1>
+
+  <form id="formulario" onsubmit="enviarFormulario(event)">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="email">Correo electrónico:</label>
+    <input name="email" required>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" required>
+
+    <button type="submit">Enviar</button>
+    <div id="mensaje"></div>
+  </form>
+
+  <div class="galeria">
+    
+    <img src="fotos/1.jpg" alt="img1">
+    <img src="fotos/2.jpg" alt="img2">
+    <img src="fotos/3.jpg" alt="img3">
+    <img src="fotos/4.jpg" alt="img4">
+    <img src="fotos/5.jpg" alt="img5">
+    <img src="fotos/6.jpg" alt="img6">
+    <img src="fotos/7.jpg" alt="img7">
+    <img src="fotos/8.jpg" alt="img8">
+    <img src="fotos/9.jpg" alt="img9">
+  </div>
+
+  <script>
+    function enviarFormulario(event) {
+      event.preventDefault();
+      document.getElementById("mensaje").textContent = "¡Gracias por responder!";
+    }
+  </script>
+    <footer>
+        <img src="fotos/yo.jpg" style="float: left; width: 8%;">
+        <p>Jorge Luna Martinez</p>  <p>MATRICULA: 22190025</p>  <p>GRUPO: 626</p>
+    </footer>
+</body>
+</html>
